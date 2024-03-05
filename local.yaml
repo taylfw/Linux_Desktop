@@ -3,7 +3,7 @@
   connection: local
   become: true
   tasks:
-    - name: install htop
+    - name: Install Applications
       package:
         name:
           - htop
