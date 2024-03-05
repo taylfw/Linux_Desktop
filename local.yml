@@ -3,6 +3,7 @@
   connection: local
   become: true
   tasks:
+
     - name: Install Applications
       package:
         name:
@@ -15,4 +16,5 @@
           - calibre
           - vlc
           - gimp
+
 
