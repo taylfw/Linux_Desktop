@@ -3,7 +3,6 @@
   connection: local
   become: true
   tasks:
-
     - name: Install Applications
       package:
         name:
@@ -17,4 +16,18 @@
           - vlc
           - gimp
 
+    - name: Copy Wallpaper file
+      copy:
+        src: files/DebianWallPaper.jpg
+        dest: /usr/share/backgrounds/ansible-wallpaper.jpg
+        owner: root
+        group: root
 
+    - name: Set Wallpaper
+      dconf:
+        key: "/org/gnome/desktop/background/picture-uri"
+        value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg'"
+    - name: Set wallpaper position
+      dconf:
+        key: "/org/gnome/desktop/background/picture-options"
+        value: "'zoom'"
