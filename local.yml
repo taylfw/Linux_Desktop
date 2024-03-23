@@ -15,6 +15,7 @@
           - calibre
           - vlc
           - gimp
+          - screenfetch
 
     - name: Copy Wallpaper file
       copy:
@@ -32,4 +33,4 @@
         key: "/org/gnome/desktop/background/picture-options"
         value: "'zoom'"
     - name: Run a script with arguments (free form)
-        ansible.builtin.script: "/home/phranc/code/ansible/Linux_Desktop/files/frank.sh"
+        ansible.builtin.script: "files/frank.sh"

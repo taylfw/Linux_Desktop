@@ -19,3 +19,5 @@ cat << "EOF"
 
   
 EOF
+
+screenfetch
