@@ -31,3 +31,5 @@
       dconf:
         key: "/org/gnome/desktop/background/picture-options"
         value: "'zoom'"
+    - name: Run a script with arguments (free form)
+        ansible.builtin.script: "/home/phranc/code/ansible/Linux_Desktop/files/frank.sh"
