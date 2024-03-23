@@ -37,7 +37,7 @@
     - name: Copy script
       copy:
         src: files/frank.sh
-        dest: /home/phranc/frank.sh
+        dest: /home/phranc/frank.sh mode=a+x
 
     - name: running script
       ansible.builtin.script: /home/phranc/frank.sh
