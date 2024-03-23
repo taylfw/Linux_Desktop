@@ -28,9 +28,11 @@
       dconf:
         key: "/org/gnome/desktop/background/picture-uri"
         value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg'"
+
     - name: Set wallpaper position
       dconf:
         key: "/org/gnome/desktop/background/picture-options"
         value: "'zoom'"
-    - name: Run a script with arguments (free form)
-        ansible.builtin.script: "files/frank.sh"
+        
+    - name: Run a script
+        ansible.builtin.script: files/frank.sh
