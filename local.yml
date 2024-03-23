@@ -34,5 +34,10 @@
         key: "/org/gnome/desktop/background/picture-options"
         value: "'zoom'"
         
-    - name: Run a script
-        ansible.builtin.script: files/frank.sh
+    - name: Copy script
+      copy:
+        src: files/frank.sh
+        dest: ~/
+    
+    - name: running script
+        ansible.builtin.script: ~/frank.sh
