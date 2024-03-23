@@ -40,4 +40,4 @@
         dest: /home/phranc/frank.sh
 
     - name: running script
-      ansible.builtin.script: ~/frank.sh
+      ansible.builtin.script: /home/phranc/frank.sh
