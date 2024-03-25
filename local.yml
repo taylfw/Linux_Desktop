@@ -41,6 +41,4 @@
         mode: a+x
 
     - name: running script
-      ansible.builtin.script: /home/phranc/frank.sh
-      args:
-        executable: .
+      ansible.builtin.shell: /home/phranc/frank.sh
