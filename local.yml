@@ -40,5 +40,5 @@
         dest: /home/phranc/frank.sh
         mode: a+x
 
-    - name: running script
-      ansible.builtin.shell: /home/phranc/frank.sh
+    - name: say something...
+      ansible.builtin.shell: echo "Hello"
