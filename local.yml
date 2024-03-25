@@ -16,6 +16,7 @@
           - vlc
           - gimp
           - screenfetch
+          - remmina
 
     - name: Copy Wallpaper file
       copy:
