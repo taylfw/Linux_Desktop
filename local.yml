@@ -20,17 +20,18 @@
 
     - name: Copy Wallpaper file
       copy:
-        src: files/DebianWallPaper.jpg
-        dest: /usr/share/backgrounds/ansible-wallpaper.jpg
+        src: files/Galaxy.jpg
+        dest: /usr/share/backgrounds/ansible-wallpaper.png
         owner: root
         group: root
 
     - name: Set Wallpaper
       dconf:
         key: "/org/gnome/desktop/background/picture-uri"
-        value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg'"
+        value: "'file:///usr/share/backgrounds/ansible-wallpaper.png'"
 
     - name: Set wallpaper position
+      become_user: phranc
       dconf:
         key: "/org/gnome/desktop/background/picture-options"
         value: "'zoom'"
@@ -39,7 +40,6 @@
       copy:
         src: files/frank.sh
         dest: /home/phranc/frank.sh
-        mode: a+x
-
-    - name: say something...
-      ansible.builtin.shell: echo "Hello"
+        mode: a+x 
+    
+    
